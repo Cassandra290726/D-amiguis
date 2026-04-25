@@ -23,13 +23,15 @@ export default function App() {
           resizeMode="cover"
         />
       </View>
-      <View style={styles.actions}>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Docente</Text>
-        </Pressable>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Alumno</Text>
-        </Pressable>
+      <View style={styles.buttonsContainer}>
+        <View style={styles.actions}>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Docente</Text>
+          </Pressable>
+          <Pressable style={styles.button}>
+            <Text style={styles.buttonText}>Alumno</Text>
+          </Pressable>
+        </View>
       </View>
     </View>
   );
@@ -45,25 +47,30 @@ const styles = StyleSheet.create({
   },
   logo: {
     overflow: 'hidden',
+    marginTop: 48,
   },
   logoImage: {
     width: '100%',
     height: '100%',
   },
+  buttonsContainer: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   actions: {
-    width: '80%',
+    width: '100%',
     marginTop: 24,
     gap: 12,
   },
   button: {
     backgroundColor: '#EC595A',
-    paddingVertical: 14,
+    paddingVertical: 20,
     borderRadius: 12,
     alignItems: 'center',
   },
   buttonText: {
     color: '#000',
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: '600',
   },
 });
